@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ftp,ubuntu," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhu-tq&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。 在Ubuntu上安装VsFTP Ubuntu version: Ubuntu 16.04.1 LTS   首先需要安装vsftpd  sudo apt-get update sudo apt-get install vsftpd   安装完成，服务器并没有自动开启，因">
+<meta name="keywords" content="ftp,ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu上安装和配置ftp服务器">
+<meta property="og:url" content="http://yoursite.com/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/index.html">
 <meta property="og:site_name" content="Zhu-tq&#39;s Blog">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。 在Ubuntu上安装VsFTP Ubuntu version: Ubuntu 16.04.1 LTS   首先需要安装vsftpd  sudo apt-get update sudo apt-get install vsftpd   安装完成，服务器并没有自动开启，因">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-28T09:31:01.160Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhu-tq&#39;s Blog">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="在Ubuntu上安装和配置ftp服务器">
+<meta name="twitter:description" content="FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。 在Ubuntu上安装VsFTP Ubuntu version: Ubuntu 16.04.1 LTS   首先需要安装vsftpd  sudo apt-get update sudo apt-get install vsftpd   安装完成，服务器并没有自动开启，因">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/"/>
 
 
 
 
 
-  <title>Zhu-tq's Blog</title>
+  <title>在Ubuntu上安装和配置ftp服务器 | Zhu-tq's Blog</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/" itemprop="url">在Ubuntu上安装和配置ftp服务器</a></h1>
+          <h1 class="post-title" itemprop="name headline">在Ubuntu上安装和配置ftp服务器</h1>
         
 
         <div class="post-meta">
@@ -365,9 +364,7 @@
       
 
       
-        
-          
-            <p>FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。</p>
+        <p>FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。</p>
 <h2 id="在Ubuntu上安装VsFTP"><a href="#在Ubuntu上安装VsFTP" class="headerlink" title="在Ubuntu上安装VsFTP"></a>在<code>Ubuntu</code>上安装<code>VsFTP</code></h2><blockquote>
 <p>Ubuntu version: Ubuntu 16.04.1 LTS</p>
 </blockquote>
@@ -434,8 +431,6 @@
 </li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -450,14 +445,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ftp/" rel="tag"># ftp</a>
+          
+            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -467,10 +470,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -478,6 +482,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -498,8 +506,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -573,6 +590,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在Ubuntu上安装VsFTP"><span class="nav-number">1.</span> <span class="nav-text">在Ubuntu上安装VsFTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置和加固VsFTP"><span class="nav-number">2.</span> <span class="nav-text">配置和加固VsFTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-FTP-用户的根目录"><span class="nav-number">3.</span> <span class="nav-text">配置 FTP 用户的根目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -706,6 +739,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
