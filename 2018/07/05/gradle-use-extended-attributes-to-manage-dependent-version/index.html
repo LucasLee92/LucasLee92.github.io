@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="gradle,maven," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhu-tq&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Maven预设变量使用过Maven的人应该都知道，我们在Maven项目中添加依赖的一般性做法。就是打开pom.xml文件，在&amp;lt;dependencies&amp;gt;节点下添加12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/">
+<meta name="keywords" content="gradle,maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gradle使用扩展属性管理依赖版本号">
+<meta property="og:url" content="http://yoursite.com/2018/07/05/gradle-use-extended-attributes-to-manage-dependent-version/index.html">
 <meta property="og:site_name" content="Zhu-tq&#39;s Blog">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="Maven预设变量使用过Maven的人应该都知道，我们在Maven项目中添加依赖的一般性做法。就是打开pom.xml文件，在&amp;lt;dependencies&amp;gt;节点下添加12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-05T06:06:55.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhu-tq&#39;s Blog">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="Gradle使用扩展属性管理依赖版本号">
+<meta name="twitter:description" content="Maven预设变量使用过Maven的人应该都知道，我们在Maven项目中添加依赖的一般性做法。就是打开pom.xml文件，在&amp;lt;dependencies&amp;gt;节点下添加12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.lucene&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;lucene-core&amp;lt;/">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/05/gradle-use-extended-attributes-to-manage-dependent-version/"/>
 
 
 
 
 
-  <title>Zhu-tq's Blog</title>
+  <title>Gradle使用扩展属性管理依赖版本号 | Zhu-tq's Blog</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/05/gradle-use-extended-attributes-to-manage-dependent-version/" itemprop="url">Gradle使用扩展属性管理依赖版本号</a></h1>
+          <h1 class="post-title" itemprop="name headline">Gradle使用扩展属性管理依赖版本号</h1>
         
 
         <div class="post-meta">
@@ -332,9 +331,7 @@
       
 
       
-        
-          
-            <h2 id="Maven预设变量"><a href="#Maven预设变量" class="headerlink" title="Maven预设变量"></a>Maven预设变量</h2><p>使用过<code>Maven</code>的人应该都知道，我们在<code>Maven</code>项目中添加依赖的一般性做法。就是打开<code>pom.xml</code>文件，在<code>&lt;dependencies&gt;</code>节点下添加<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.lucene<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lucene-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="Maven预设变量"><a href="#Maven预设变量" class="headerlink" title="Maven预设变量"></a>Maven预设变量</h2><p>使用过<code>Maven</code>的人应该都知道，我们在<code>Maven</code>项目中添加依赖的一般性做法。就是打开<code>pom.xml</code>文件，在<code>&lt;dependencies&gt;</code>节点下添加<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.lucene<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lucene-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>包含坐标和版本号的内容，那么在项目中，就可以引用<code>Lucene-core</code>Jar包中的各种类了。但是要注意一点，这里面的版本号是以硬编码的形式存在，作为一个合格的软件开发者，要尽量在你的代码中避免硬编码的情况，方便版本管理<br>在Maven中使用预设变量的方式来解决：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version.lucene</span>&gt;</span>6.0.0<span class="tag">&lt;/<span class="name">version.lucene</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.lucene<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lucene-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;version.lucene&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.lucene<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lucene-queries<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;version.lucene&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>那么以后再遇到项目升级的情况，只需要手动修改<code>&lt;version.lucene&gt;6.0.0&lt;/version.lucene&gt;</code>一行代码即可搞定，所有引用到该版本变量的依赖都自动升级。</p>
 <h2 id="Gradle单模块"><a href="#Gradle单模块" class="headerlink" title="Gradle单模块"></a>Gradle单模块</h2><p>同样作为后起之秀的<code>Gradle</code>如何优雅地解决类似问题呢？硬编码的写法如下</p>
@@ -351,8 +348,6 @@
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span> <span class="string">"junit:junit:$&#123;rootProject.libVersions.junit&#125;"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>转载至<a href="http://codepub.cn/2017/05/09/Gradle-uses-extended-attributes-to-manage-dependent-version-numbers/" target="_blank" rel="noopener">Gradle使用扩展属性管理依赖版本号</a></p>
 
-          
-        
       
     </div>
     
@@ -367,418 +362,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/28/secure-ftp-server-using-ssl-tls-on-ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhu tq">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://i4.bvimg.com/651499/9e0978be34886f6d.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhu-tq's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/28/secure-ftp-server-using-ssl-tls-on-ubuntu/" itemprop="url">在Ubuntu上使用SSL/TLS加密ftp服务器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-28T17:39:37+08:00">
-                2018-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/ftp/" itemprop="url" rel="index">
-                    <span itemprop="name">ftp</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/gradle/" rel="tag"># gradle</a>
           
-
+            <a href="/tags/maven/" rel="tag"># maven</a>
           
-            
-          
-
-          
-          
-             <span id="/2018/06/28/secure-ftp-server-using-ssl-tls-on-ubuntu/" class="leancloud_visitors" data-flag-title="在Ubuntu上使用SSL/TLS加密ftp服务器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="生成-SSL-TLS-证书"><a href="#生成-SSL-TLS-证书" class="headerlink" title="生成 SSL/TLS 证书"></a>生成 SSL/TLS 证书</h2><ol>
-<li>创建子文件夹用于存储证书，<code>sudo mkdir /etc/ssl/private</code></li>
-<li>生成证书和key，<code>sudo openssl req -x509 -nodes -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem -days 365 -newkey rsa:2048</code></li>
-</ol>
-<h2 id="配置vsftpd使用SSl-TLS加密通信"><a href="#配置vsftpd使用SSl-TLS加密通信" class="headerlink" title="配置vsftpd使用SSl/TLS加密通信"></a>配置vsftpd使用SSl/TLS加密通信</h2><h3 id="配置防火墙策略"><a href="#配置防火墙策略" class="headerlink" title="配置防火墙策略"></a>配置防火墙策略</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 990/tcp</span><br><span class="line">sudo ufw allow 40000:50000/tcp</span><br><span class="line">sudo ufw status</span><br></pre></td></tr></table></figure>
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><ul>
-<li><code>sudo vi /etc/vsftpd.conf</code></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ssl_enable=YES</span><br><span class="line">ssl_tlsv1=YES</span><br><span class="line">ssl_sslv2=NO</span><br><span class="line">ssl_sslv3=NO</span><br><span class="line">#rsa_cert_file=/etc/ssl/private/ssl-cert-snakeoil.pem</span><br><span class="line">#rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key</span><br><span class="line">rsa_cert_file=/etc/ssl/private/vsftpd.pem</span><br><span class="line">rsa_private_key_file=/etc/ssl/private/vsftpd.pem</span><br><span class="line">allow_anon_ssl=NO</span><br><span class="line">force_local_data_ssl=YES</span><br><span class="line">force_local_logins_ssl=YES</span><br><span class="line">require_ssl_reuse=NO</span><br><span class="line">ssl_ciphers=HIGH # 选择高加密的加密方式</span><br><span class="line">pasv_min_port=40000 # 被动通信的最大和最小端口</span><br><span class="line">pasv_max_port=50000</span><br><span class="line">debug_ssl=YES # ssl连接的日志级别提升到debug</span><br></pre></td></tr></table></figure>
-<ul>
-<li>重启，<code>sudo systemctl restart vsftpd</code></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhu tq">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://i4.bvimg.com/651499/9e0978be34886f6d.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhu-tq's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/" itemprop="url">在Ubuntu上安装和配置ftp服务器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-28T13:25:44+08:00">
-                2018-06-28
-              </time>
+              <a href="/2018/06/28/secure-ftp-server-using-ssl-tls-on-ubuntu/" rel="next" title="在Ubuntu上使用SSL/TLS加密ftp服务器">
+                <i class="fa fa-chevron-left"></i> 在Ubuntu上使用SSL/TLS加密ftp服务器
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/ftp/" itemprop="url" rel="index">
-                    <span itemprop="name">ftp</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/06/28/how-to-install-and-configure-ftp-server-in-ubuntu/" class="leancloud_visitors" data-flag-title="在Ubuntu上安装和配置ftp服务器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>FTP是一个相对古老，用于两台电脑之间上传，下载文件的网络协议。然而，FTP的原始安全策略在传输数据，帐号，密码时并没有加密处理。</p>
-<h2 id="在Ubuntu上安装VsFTP"><a href="#在Ubuntu上安装VsFTP" class="headerlink" title="在Ubuntu上安装VsFTP"></a>在<code>Ubuntu</code>上安装<code>VsFTP</code></h2><blockquote>
-<p>Ubuntu version: Ubuntu 16.04.1 LTS</p>
-</blockquote>
-<ol>
-<li><p>首先需要安装vsftpd</p>
-<ol>
-<li><code>sudo apt-get update</code></li>
-<li><code>sudo apt-get install vsftpd</code></li>
-</ol>
-</li>
-<li><p>安装完成，服务器并没有自动开启，因此，我们需要手动开机，并添加到开机启动中</p>
-<ol>
-<li><code>sudo systemctl start vsftpd</code></li>
-<li><code>sudo systemctl enable vsftpd</code></li>
-</ol>
-</li>
-<li><p>开启<code>ufw firewall</code>的20和21接口</p>
-<ol>
-<li><code>sudo ufw allow 20/tcp</code></li>
-<li><code>sudo ufw allow 21/tcp</code></li>
-<li><code>sudo ufw status</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="配置和加固VsFTP"><a href="#配置和加固VsFTP" class="headerlink" title="配置和加固VsFTP"></a>配置和加固<code>VsFTP</code></h2><ol>
-<li><p>修改配置文件</p>
-<ol>
-<li><code>sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.orig</code></li>
-<li><code>sudo vi /etc/vsftpd.conf</code></li>
-<li>修改配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable=NO             # disable  anonymous login</span><br><span class="line">local_enable=YES		# permit local logins</span><br><span class="line">write_enable=YES		# enable FTP commands which change the filesystem</span><br><span class="line">local_umask=022		        # value of umask for file creation for local users</span><br><span class="line">dirmessage_enable=YES	        # enable showing of messages when users first enter a new directory</span><br><span class="line">xferlog_enable=YES		# a log file will be maintained detailing uploads and downloads</span><br><span class="line">connect_from_port_20=YES        # use port 20 (ftp-data) on the server machine for PORT style connections</span><br><span class="line">xferlog_std_format=YES          # keep standard log file format</span><br><span class="line">listen=NO   			# prevent vsftpd from running in standalone mode</span><br><span class="line">listen_ipv6=YES		        # vsftpd will listen on an IPv6 socket instead of an IPv4 one</span><br><span class="line">pam_service_name=vsftpd         # name of the PAM service vsftpd will use</span><br><span class="line">userlist_enable=YES  	        # enable vsftpd to load a list of usernames</span><br><span class="line">tcp_wrappers=YES  		# turn on tcp wrappers</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>当<code>userlist_deny=YES</code>并且<code>userlist_enable=YES</code>时，位于用户列表的用户是被拒绝访问的，但如果<code>userlist_deny=NO</code>，则变成只有位于用户列表下的用户才会允许访问</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">userlist_enable=YES                   # vsftpd will load a list of usernames, from the filename given by userlist_file</span><br><span class="line">userlist_file=/etc/vsftpd.userlist    # stores usernames.</span><br><span class="line">userlist_deny=NO</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置选项<code>chroot_local_user=YES</code>当用户登录的时候，会定位于用户根目录下，并且 VSFTPD 初始是不允许在用户根目录下写入的，需要打开配置<code>allow_writeable_chroot=YES</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chroot_local_user=YES</span><br><span class="line">allow_writeable_chroot=YES</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启 <code>sudo systemctl restart vsftpd</code></p>
-</li>
-</ol>
-<h2 id="配置-FTP-用户的根目录"><a href="#配置-FTP-用户的根目录" class="headerlink" title="配置 FTP 用户的根目录"></a>配置 FTP 用户的根目录</h2><ol>
-<li><p>创建FTP用户</p>
-<ol>
-<li><code>sudo useradd -m -c &quot;ftp test user&quot; -s /bin/bash ftptest</code></li>
-<li><code>sudo passwd ftptest</code></li>
-<li><code>echo &quot;ftptest&quot; | sudo tee -a /etc/vsftpd.userlist</code></li>
-<li><code>cat /etc/vsftpd.userlist</code></li>
-</ol>
-</li>
-<li><p>处于安全要求，修改配置文件，不予许在根目录写入， <code>#allow_writeable_chroot=YES</code></p>
-</li>
-<li><p>在用户根目录下创建一个目录，不允许其他用户写入</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /home/ftptest/ftp</span><br><span class="line">sudo chown nobody:nogroup /home/ftptest/ftp</span><br><span class="line">sudo chmod a-w /home/ftptest/ftp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建一个目录用于写入</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /home/ftptest/ftp/files</span><br><span class="line">sudo chown -R ftptest:ftptest /home/ftptest/ftp/files</span><br><span class="line">sudo chmod -R 0770 /home/ftptest/ftp/files/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置文件，重新定义用户的根目录位置</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user_sub_token=$USER          # inserts the username in the local root directory </span><br><span class="line">local_root=/home/$USER/ftp    # defines any users local root directory</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启，<code>sudo systemctl restart vsftpd</code></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -788,10 +403,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -799,6 +415,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -819,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -894,6 +523,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven预设变量"><span class="nav-number">1.</span> <span class="nav-text">Maven预设变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle单模块"><span class="nav-number">2.</span> <span class="nav-text">Gradle单模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle多模块"><span class="nav-number">3.</span> <span class="nav-text">Gradle多模块</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1027,6 +672,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
